@@ -11,10 +11,10 @@
     <!-- Header Section -->
     <header>
         <div class="container">
-            <img src="path-to-your-image.jpg" alt="Elian Maycock" class="profile-image">
+            <img src="/Users/em/Downloads/portfolio/1659026711602.jpeg" alt="Elian Maycock" class="profile-image">
             <h1>Elian Maycock</h1>
-            <p>| Data Analyst | Software Developer</p>
-            <a href="/Users/em/Downloads/portfolio/1659026711602.jpeg" class="cta">View My Projects</a>
+            <p> Data Analyst | Software Developer</p>
+            <a href="https://github.com/Emaycock" class="cta">View My Projects</a>
         </div>
     </header>
 
@@ -29,38 +29,61 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">SQL</div>
+                <div class="skill">Python</div>
+                <div class="skill">Tableau</div>
+                <div class="skill">Excel</div>
+                <div class="skill">Machine Learning</div>
+                <div class="skill">Data Visualization</div>
+                <div class="skill">Data Cleaning</div>
+                <div class="skill">Statistical Analysis</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
+            <!-- Grid Container -->
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project">
                     <h3>Bike Sales Data Analysis</h3>
-                    <p>This project involved cleaning, analyzing, and visualizing a bike sales dataset in Excel. 
-                        Key tasks included removing duplicates, handling missing values, and creating a dashboard that provides insights into bike purchases across various age groups, income levels, and commute distances. 
-                        The final product is an intuitive, interactive dashboard that highlights key trends in customer behavior.
+                    <p>This project involved cleaning, analyzing, and visualizing a bike sales dataset...</p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                    <p class="details">
+                        Key tasks included removing duplicates, handling missing values, and creating a dashboard that provides insights into bike purchases across various age groups, income levels, and commute distances. The final product is an intuitive, interactive dashboard that highlights key trends in customer behavior.
                     </p>
-                    <a href="https://github.com/Emaycock/excel-bike-data-project-" target="_blank">View Project</a>
+                    <a href="https://github.com/Emaycock/excel-bike-data-project-" target="_blank" class="project-link">View Project</a>
                 </div>
+                
                 <!-- Project 2 -->
                 <div class="project">
-                    <h3>Vehicle Data Analysis and Dashboard:</h3>
-                    <p>This project analyzes a vehicle dataset using Python and Tableau. After cleaning and transforming the data with Python and Pandas, I created an interactive dashboard in Tableau to visualize key metrics such as vehicle make, model, year, quantity, location, and MSRP. 
-                        Additional metrics like battery type, battery range, and type of fuel were also analyzed, providing insights into vehicle energy efficiency and market trends. 
-                        This dashboard enables a vehicle manufacturer to leverage data-driven insights to optimize sales strategies and maximize revenue potential</p>
-                    <a href="https://github.com/Emaycock/vehicle-data-project-" target="_blank">View Project</a>
+                    <h3>Vehicle Data Analysis and Dashboard</h3>
+                    <p>This project analyzes a vehicle dataset using Python and Tableau...</p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                    <p class="details">
+                        After cleaning and transforming the data with Python and Pandas, I created an interactive dashboard in Tableau to visualize key metrics such as vehicle make, model, year, quantity, location, and MSRP. Additional metrics like battery type, battery range, and type of fuel were also analyzed, providing insights into vehicle energy efficiency and market trends.
+                    </p>
+                    <a href="https://github.com/Emaycock/vehicle-data-project-" target="_blank" class="project-link">View Project</a>
                 </div>
 
+                <!-- Project 3 -->
                 <div class="project">
-                    <h3>Project Name 2</h3>
-                    <p>Brief description of the project. What technologies were used, and what was the goal?</p>
-                    <a href="project-link-2" target="_blank">View Project</a>
+                    <h3>Customer Churn Prediction</h3>
+                    <p>This project focused on predicting customer churn using machine learning...</p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                    <p class="details">
+                        By analyzing customer behavior and subscription data, I built a machine learning model using Python's Scikit-learn. The project involved exploratory data analysis (EDA), feature engineering, and model evaluation to identify key factors contributing to churn. Results were visualized in Tableau, providing actionable insights to improve customer retention strategies.
+                    </p>
+                    <a href="https://github.com/Emaycock/customer-churn-project-" target="_blank" class="project-link">View Project</a>
                 </div>
-
-            
-
-                <!-- Add more projects as needed -->
             </div>
         </div>
     </section>
@@ -71,12 +94,13 @@
             <h2>Contact Me</h2>
             <p>If you’d like to connect, feel free to reach out via email or LinkedIn!</p>
             <ul class="contact-links">
-                <li><a href="elianmaycock_32@hotmail.com">Email</a></li>
+                <li><a href="mailto:elianmaycock_32@hotmail.com">Email</a></li>
                 <li><a href="https://www.linkedin.com/in/elian-maycock-9b7aa9197/" target="_blank">LinkedIn</a></li>
                 <li><a href="https://github.com/Emaycock" target="_blank">GitHub</a></li>
             </ul>
         </div>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
