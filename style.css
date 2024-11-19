@@ -9,6 +9,7 @@
 body {
     color: #333;
     line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
 /* Header Section */
@@ -19,12 +20,25 @@ header {
     text-align: center;
 }
 
-header .container h1 {
+header .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-header .container p {
+header p {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
@@ -37,65 +51,178 @@ header .cta {
     border-radius: 5px;
 }
 
-/* Section Styles */
+/* Section Containers */
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
     padding: 20px 0;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusts based on screen size */
-    gap: 20px;
-    width: 100%;
-}
-
-.project {
-    max-width: 100%;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
+/* About Section */
+#about {
+    background-color: #fff;
+    padding: 20px 0;
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr; /* Forces single-column layout on smaller screens */
-    }
+#about h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
 }
 
+#about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#skills h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;  /* Allows wrapping the skills items if there's not enough space */
+    justify-content: center;  /* Center-align the skills */
+    gap: 15px;  /* Add space between skills */
+}
+
+.skill {
+    background-color: #f2f2f2; /* Light gray background */
+    color: #333;
+    padding: 8px 15px;  /* Smaller padding */
+    border-radius: 20px;  /* Rounded corners */
+    font-size: 0.9rem;  /* Smaller text size */
+    text-align: center;  /* Center the text inside */
+    width: auto;  /* Allow skill width to adjust automatically */
+    max-width: 120px;  /* Limit the maximum width for compactness */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.skill:hover {
+    background-color: #0073e6;  /* Change to blue on hover */
+    color: white;
+    transform: translateY(-2px);  /* Slight movement for a hover effect */
+}
+
+/* Projects Section */
+#projects {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between cards */
+}
+
+.project {
+    background-color: #f1f1f1; /* Slightly darker than white */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Full width for mobile, adjusted for compactness */
+    max-width: 800px; /* Set a max width to make the cards more compact */
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    margin: 0 auto;  /* Center align the cards */
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 
 .project h3 {
     margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
 }
 
-.project a {
-    color: #0073e6;
-    text-decoration: none;
-    font-weight: bold;
+.project p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
 }
+
+.project .details {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.project-link {
+    display: block;
+    margin-top: 10px;
+    color: #0073e6;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
 
 /* Contact Section */
-#contact ul.contact-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+#contact {
+    padding: 40px 20px;
+    background-color: #333;
+}
+
+#contact h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+#contact p {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px;
+    
+    color: #ffffff;
+}
+
+.contact-links {
+    display: flex; /* Align the links in a row */
+    justify-content: center; /* Center the links horizontally */
+    gap: 20px; /* Add space between the links */
+    list-style: none; /* Remove the default list styling */
+    padding: 0;
 }
 
 .contact-links a {
     color: #0073e6;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
 }
 
-.profile-image {
-    width: 100px; /* Adjust the size of your image */
-    height: 100px; /* Adjust the size of your image */
-    border-radius: 50%; /* Makes the image round */
-    margin-bottom: 20px; /* Adds some space below the image */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.contact-links a:hover {
+    text-decoration: underline;
 }
